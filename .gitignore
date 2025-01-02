@@ -1,0 +1,5 @@
+.DS_Store
+.vim/tmp
+.vim/bundle/**/*
+.vim/bundle/
+.vim/autoload/

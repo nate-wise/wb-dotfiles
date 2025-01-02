@@ -1,0 +1,53 @@
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+[user]
+	name = Nate Wise
+	email = nathan.wise@wealthbox.com
+	signingKey =
+;[merge]
+;  tool = nvim
+; [mergetool "extMerge"]
+  ; cmd = extMerge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+  ; trustExitCode = false
+;   keepBackup = false
+[core]
+  editor = /usr/bin/vim
+  excludesfile = /Users/nathanwise/.gitignore_global
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+  required = true
+	process = git-lfs filter-process
+[branch]
+  autosetuprebase = always
+;[merge.tool "p4mergetool"]
+;  cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $PWD/$BASE $PWD/$REMOTE $PWD/$LOCAL $PWD/$MERGED
+;  trustExitCode = false
+; [mergetool "nvim"]
+;   cmd = nvim -f -c \"Gdiffsplit!\" \"$MERGED\"
+;   keepBackup = false
+[diff]
+	tool = p4mergetool
+[difftool "p4mergetool"]
+	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $LOCAL $REMOTE
+  cachetextconv = false
+[diff "encrypted"]
+  textconv = rails encrypted:show
+  cachetextconv = false
+; [pager]
+;   diff = diff-so-fancy | less --tabs=1,5 -RFX
+;   show = diff-so-fancy | less --tabs=1,5 -RFX
+;   branch = false
+[difftool "sourcetree"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
+[commit]
+  template = /Users/nathanwise/.stCommitMsg
+	gpgSign = false
+[pager]
+  branch = false
+[tag]
+	forceSignAnnotated = false
