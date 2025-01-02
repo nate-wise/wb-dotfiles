@@ -1,3 +1,5 @@
 #!/bin/zsh
 
-ln -s .zshenv ~/.zshenv
+pwd
+ln -s ~/dotfiles/.zshenv ~/.zshenv
+ln -s ~/dotfiles/.zshrc ~/.zshrc
