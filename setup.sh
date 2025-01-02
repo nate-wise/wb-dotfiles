@@ -15,6 +15,7 @@ sudo chmod -R 777 /usr/local/bundle
 sudo mkdir -p /usr/local/lib/ruby
 sudo chmod -R 777 /usr/local/lib/ruby
 
+sudo mkdir -p $CACHE_DIR
 sudo chmod -R 777 /usr/local/bin
 sudo chmod -R 777 $CACHE_DIR
 
