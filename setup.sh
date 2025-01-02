@@ -9,12 +9,12 @@ ln -s ~/dotfiles/.config ~/.config
 
 export CACHE_DIR=/usr/local/cache
 
-mkdir -p /usr/local/bundle
-chmod -R 777 /usr/local/bundle
+sudo mkdir -p /usr/local/bundle
+sudo chmod -R 777 /usr/local/bundle
 
-mkdir -p /usr/local/lib/ruby
-chmod -R 777 /usr/local/lib/ruby
+sudo mkdir -p /usr/local/lib/ruby
+sudo chmod -R 777 /usr/local/lib/ruby
 
-chmod -R 777 /usr/local/bin
-chmod -R 777 $CACHE_DIR
+sudo chmod -R 777 /usr/local/bin
+sudo chmod -R 777 $CACHE_DIR
 
